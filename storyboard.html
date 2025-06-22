@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Storyboard - ultidaph</title>
+<title>ultidaph</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Neue+Haas+Grotesk:wght@300;700&display=swap');
 
@@ -13,13 +13,13 @@
   }
 
   body, html {
+    height: 100%;
     font-family: 'Neue Haas Grotesk', Arial, sans-serif;
     background: white;
     color: black;
-    min-height: 100vh;
   }
 
- /* Conteneur principal centré */
+  /* Conteneur principal centré */
   .container {
     min-height: 100vh;
     display: flex;
@@ -47,15 +47,9 @@
   }
 
   /* Menu horizontal */
-  nav {
-    margin-top: 15px;
-    width: 100%;
-    max-width: 600px;
-  }
   nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
     gap: 50px;
   }
   nav ul li a {
@@ -69,76 +63,49 @@
     color: gray;
   }
 
-  /* Contenu principal */
-  main {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
-
-  /* Grille projets */
-  .grid {
+  /* Grille 4 sections */
+  .sections-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(4, 180px);
     gap: 30px;
   }
-
-  .project {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-    transition: transform 0.2s;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  .section-card {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    height: 140px;
     background: white;
+    border: 1px solid black;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: black;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    user-select: none;
   }
-
-  .project img {
-    width: 100%;
-    height: 280px; /* carré */
-    object-fit: cover;
-    display: block;
-    border-bottom: 1px solid #ddd;
-    border-radius: 8px 8px 0 0;
-  }
-
-  .project:hover {
-    transform: scale(1.03);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-  }
-
-  .caption {
-    padding: 15px;
-    font-weight: bold;
-    text-align: center;
-    width: 100%;
-    box-sizing: border-box;
+  .section-card:hover {
+    background-color: #eee;
+    color: gray;
   }
 </style>
 </head>
 <body>
 
-  <header>
+  <div class="container">
     <div class="logo">
-      <img src="images/entete.jpg" alt="Logo ultidaph">
-    </div>
+  <img src="images/entete.jpg" alt="Logo" style="height: 500px;">
+</div>
+      
 
     <nav>
       <ul>
-        <li><a href="index.html">Accueil</a></li>
         <li><a href="storyboard.html">Storyboard</a></li>
         <li><a href="bd.html">BD</a></li>
         <li><a href="illustration.html">Illustration</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-  </header>
-
-  <main>
+<main>
     <div class="grid">
       <a href="Amen" class="project">
         <img src="images/amen STORYBOARD.jpg" alt="Amen">
@@ -154,6 +121,7 @@
       </a>
     </div>
   </main>
+ 
 
 </body>
 </html>
