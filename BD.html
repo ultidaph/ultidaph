@@ -1,112 +1,61 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>ultidaph</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Neue+Haas+Grotesk:wght@300;700&display=swap');
-
-  /* Reset */
-  * {
-    margin: 0; padding: 0; box-sizing: border-box;
-  }
-
-  body, html {
-    height: 100%;
-    font-family: 'Neue Haas Grotesk', Arial, sans-serif;
-    background: white;
-    color: black;
-  }
-
-  /* Conteneur principal centré */
-  .container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* vertical center */
-    align-items: center;     /* horizontal center */
-    gap: 40px;
-    padding: 20px;
-  }
-
-  /* Logo + titre */
-  .logo-title {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  .logo-title img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-  }
-  .logo-title h1 {
-    font-weight: 700;
-    font-size: 2.8rem;
-  }
-
-  /* Menu horizontal */
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 50px;
-  }
-  nav ul li a {
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.3rem;
-    color: black;
-    transition: color 0.3s ease;
-  }
-  nav ul li a:hover {
-    color: gray;
-  }
-
-  /* Grille 4 sections */
-  .sections-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 180px);
-    gap: 30px;
-  }
-  .section-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 140px;
-    background: white;
-    border: 1px solid black;
-    font-weight: 700;
-    font-size: 1.3rem;
-    color: black;
-    cursor: pointer;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    user-select: none;
-  }
-  .section-card:hover {
-    background-color: #eee;
-    color: gray;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nom de la page</title>
+  <style>
+    /* Ton CSS ici, pour menu et style */
+    body {
+      font-family: 'Neue Haas Grotesk', Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: white;
+      color: black;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 50px;
+      padding: 20px;
+      background: #eee;
+      margin: 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: black;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: gray;
+    }
+  </style>
 </head>
 <body>
 
-  <div class="container">
+  <!-- Entête avec logo -->
+  <header>
     <div class="logo">
-  <img src="images/entete.jpg" alt="Logo" style="height: 500px;">
-</div>
-      
-
+      <img src="images/entete.jpg" alt="Logo" style="height: 100px;">
+    </div>
+    <!-- Menu -->
     <nav>
       <ul>
+        <li><a href="index.html">Accueil</a></li>
         <li><a href="storyboard.html">Storyboard</a></li>
         <li><a href="bd.html">BD</a></li>
         <li><a href="illustration.html">Illustration</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+  </header>
 
- 
+  <!-- Contenu spécifique à chaque page -->
+  <main>
+    <h1>Page BD</h1>
+    <p>Bienvenue sur la page BD de mon site.</p>
+  </main>
 
 </body>
 </html>
