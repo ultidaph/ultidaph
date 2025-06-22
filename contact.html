@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact - ultidaph</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Neue+Haas+Grotesk:wght@300;700&display=swap');
+
+  /* Reset */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+
+  body, html {
+    height: 100%;
+    font-family: 'Neue Haas Grotesk', Arial, sans-serif;
+    background: white;
+    color: black;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  /* Entête identique */
+  .logo {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .logo img {
+    height: 500px;
+    object-fit: contain;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 50px;
+  }
+  nav ul li a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: black;
+    transition: color 0.3s ease;
+  }
+  nav ul li a:hover {
+    color: gray;
+  }
+
+  /* Formulaire */
+  form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  label {
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
+  input, textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid black;
+    font-family: 'Neue Haas Grotesk', Arial, sans-serif;
+    resize: vertical;
+  }
+
+  textarea {
+    min-height: 120px;
+  }
+
+  button {
+    width: 150px;
+    padding: 12px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: 1px solid black;
+    background: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #eee;
+  }
+
+  /* Logos sociaux */
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+  }
+  .social-icons img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+  }
+  .social-icons img:hover {
+    filter: none;
+  }
+</style>
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="logo">
+      <img src="images/entete.jpg" alt="Logo ultidaph" />
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="storyboard.html">Storyboard</a></li>
+        <li><a href="bd.html">BD</a></li>
+        <li><a href="illustration.html">Illustration</a></li>
+        <li><a href="contact.html" style="color:gray; pointer-events:none;">Contact</a></li>
+      </ul>
+    </nav>
+
+    <form>
+      <label for="name">Nom :</label>
+      <input type="text" id="name" name="name" placeholder="Votre nom" required />
+
+      <label for="address">Adresse :</label>
+      <input type="text" id="address" name="address" placeholder="Votre adresse" />
+
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" placeholder="Votre email" required />
+
+      <label for="phone">Téléphone :</label>
+      <input type="tel" id="phone" name="phone" placeholder="Votre téléphone" />
+
+      <label for="message">Message :</label>
+      <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+
+      <button type="submit">Envoyer</button>
+    </form>
+
+    <div class="social-icons">
+      <a href="https://www.behance.net/"><img src="images/behance.png" alt="Behance" title="Behance" /></a>
+      <a href="https://www.linkedin.com/"><img src="images/linkedin.png" alt="LinkedIn" title="LinkedIn" /></a>
+      <!-- Ajoute d'autres liens ici si besoin -->
+    </div>
+
+  </div>
+
+</body>
+</html>
