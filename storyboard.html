@@ -1,132 +1,86 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Storyboard</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Neue+Haas+Grotesk:wght@300;700&display=swap');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Storyboard</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Neue Haas Grotesk', 'Arial', sans-serif;
+      background-color: white;
+      color: black;
+    }
 
-  /* Reset */
-  * {
-    margin: 0; padding: 0; box-sizing: border-box;
-  }
+    .container {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
 
-  body, html {
-    height: 100%;
-    font-family: 'Neue Haas Grotesk', Arial, sans-serif;
-    background: white;
-    color: black;
-  }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+    }
 
-  /* Conteneur principal */
-  .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-  }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+    }
 
-  /* Logo + titre (copié de index) */
-  .logo {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .logo img {
-    max-height: 500px;
-    width: auto;
-  }
+    .project {
+      border: 1px solid black;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
 
-  /* Menu horizontal (copié de index) */
-  nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    margin-bottom: 40px;
-  }
-  nav ul li a {
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.3rem;
-    color: black;
-    transition: color 0.3s ease;
-  }
-  nav ul li a:hover {
-    color: gray;
-  }
-  nav ul li a.active {
-    color: gray;
-  }
+    .project img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
 
-  /* Titre page */
-  h1 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-  }
+    .project:hover {
+      transform: scale(1.02);
+    }
 
-  /* Grille projets */
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-  }
-
-  .project {
-    border: 1px solid black;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.2s;
-  }
-  .project img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
-  }
-  .project:hover {
-    transform: scale(1.02);
-  }
-  .caption {
-    padding: 15px;
-    font-weight: bold;
-    text-align: center;
-  }
-</style>
+    .caption {
+      padding: 15px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 
   <div class="container">
-    <div class="logo">
-      <img src="images/entete.jpg" alt="Logo">
-    </div>
+    <h1> </h1>
 
-    <nav>
-      <ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="storyboard.html" class="active">Storyboard</a></li>
-        <li><a href="bd.html">BD</a></li>
-        <li><a href="illustration.html">Illustration</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-
-    <h1>Storyboard</h1>
-
-    <div class="grid">
-      <div class="project">
-        <img src="images/storyboard1.jpg" alt="Projet 1">
+    <div class="image-container">
+      <!-- Projet 1 -->
+      <a href="Amen" class="project">
+        <img src="images/amen STORYBOARD.jpg" alt="Amen">
         <div class="caption">Projet 1</div>
-      </div>
-      <div class="project">
+      </a>
+
+      <!-- Projet 2 -->
+      <a href="projet2.html" class="project">
         <img src="images/storyboard2.jpg" alt="Projet 2">
         <div class="caption">Projet 2</div>
-      </div>
-      <div class="project">
+      </a>
+
+      <!-- Projet 3 -->
+      <a href="projet3.html" class="project">
         <img src="images/storyboard3.jpg" alt="Projet 3">
         <div class="caption">Projet 3</div>
-      </div>
-      <!-- Tu peux ajouter d’autres projets ici -->
+      </a>
     </div>
   </div>
 
