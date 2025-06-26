@@ -1,101 +1,113 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>ultidaph</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Neue+Haas+Grotesk:wght@300;700&display=swap');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ultidaph</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Neue+Haas+Grotesk:wght@300;700&display=swap');
 
-  /* Reset */
-  * {
-    margin: 0; padding: 0; box-sizing: border-box;
-  }
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
 
-  body, html {
-    height: 100%;
-    font-family: 'Neue Haas Grotesk', Arial, sans-serif;
-    background: white;
-    color: black;
-  }
+    body, html {
+      height: 100%;
+      font-family: 'Neue Haas Grotesk', Arial, sans-serif;
+      background: white;
+      color: black;
+    }
 
-  /* Conteneur principal centré */
-  .container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* vertical center */
-    align-items: center;     /* horizontal center */
-    gap: 40px;
-    padding: 20px;
-  }
+    .container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      padding: 20px;
+    }
 
-  /* Logo + titre */
-  .logo-title {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
-  .logo-title img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-  }
-  .logo-title h1 {
-    font-weight: 700;
-    font-size: 2.8rem;
-  }
+    .logo {
+      text-align: center;
+    }
 
-  /* Menu horizontal */
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 50px;
-  }
-  nav ul li a {
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.3rem;
-    color: black;
-    transition: color 0.3s ease;
-  }
-  nav ul li a:hover {
-    color: gray;
-  }
+    .logo img {
+      height: 500px;
+    }
 
-  /* Grille 4 sections */
-  .sections-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 180px);
-    gap: 30px;
-  }
-  .section-card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 140px;
-    background: white;
-    border: 1px solid black;
-    font-weight: 700;
-    font-size: 1.3rem;
-    color: black;
-    cursor: pointer;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    user-select: none;
-  }
-  .section-card:hover {
-    background-color: #eee;
-    color: gray;
-  }
-</style>
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 50px;
+      padding: 20px 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: black;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: gray;
+    }
+
+    /* Grille projets */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      width: 100%;
+      max-width: 1000px;
+      padding: 20px;
+    }
+
+    .project {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 1 / 1; /* carré parfait */
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .project img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: filter 0.3s ease;
+    }
+
+    .project .caption {
+      position: absolute;
+      color: white;
+      font-weight: 700;
+      font-size: 1.4rem;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease, color 0.3s ease;
+      z-index: 2;
+    }
+
+    .project:hover img {
+      filter: grayscale(100%) brightness(0.6);
+    }
+
+    .project:hover .caption {
+      opacity: 1;
+      color: #f0f0f0;
+    }
+  </style>
 </head>
 <body>
 
   <div class="container">
     <div class="logo">
-  <img src="images/entete.jpg" alt="Logo" style="height: 500px;">
-</div>
-      
+      <img src="images/entete.jpg" alt="Logo">
+    </div>
 
     <nav>
       <ul>
@@ -106,7 +118,23 @@
       </ul>
     </nav>
 
- 
+    <main>
+      <div class="grid">
+        <a href="amen.html" class="project"> 
+          <img src="images/amen STORYBOARD.jpg" alt="Amen">
+          <div class="caption">Amen</div>
+        </a>
+        <a href="projet2.html" class="project">
+          <img src="images/storyboard2.jpg" alt="Projet 2">
+          <div class="caption">Projet 2</div>
+        </a>
+        <a href="projet3.html" class="project">
+          <img src="images/storyboard3.jpg" alt="Projet 3">
+          <div class="caption">Projet 3</div>
+        </a>
+      </div>
+    </main>
+  </div>
 
 </body>
 </html>
