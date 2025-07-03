@@ -87,7 +87,30 @@
     background-color: #eee;
     color: gray;
   }
-</style>
+</style> 
+  .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 60px auto 40px;
+}
+
+.gallery-grid .item {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border: 1px solid black;
+}
+
+
 </head>
 <body>
 
@@ -107,6 +130,15 @@
     </nav>
 
  
-
+<div class="gallery-grid">
+  <div class="item"><img src="images/illu1.jpg" alt="Illustration 1"></div>
+  <div class="item"><img src="images/illu2.jpg" alt="Illustration 2"></div>
+  <div class="item"><img src="images/illu3.jpg" alt="Illustration 3"></div>
+  <div class="item"><img src="images/illu4.jpg" alt="Illustration 4"></div>
+  <div class="item"><img src="images/illu5.jpg" alt="Illustration 5"></div>
+  <div class="item"><img src="images/illu6.jpg" alt="Illustration 6"></div>
+  <div class="item"><img src="images/illu7.jpg" alt="Illustration 7"></div>
+  <div class="item"><img src="images/illu8.jpg" alt="Illustration 8"></div>
+</div>
 </body>
 </html>
